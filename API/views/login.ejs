@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="/login.css" rel="stylesheet">
+   <title>Faça seu login ! - Estoks</title>
+</head>
+<body>
+   <main>
+      <div id="container-login"> 
+         <div id="login-header">
+            <h1>Bem-vindo!</h1>
+         </div>
+         <div id="login-body">
+            <form action="/login" method="POST">
+               <div>
+                  <label for="username">Usuário:</label>
+                  <input type="text" name="username" id="username">
+               </div>
+               <div>
+                  <label for="password">Senha:</label>
+                  <input type="password" name="password" id="password"> 
+               </div>
+               <% if(message) { %>
+                  <p>
+                    <label style="color:Red"><%= message %></label>
+                  </p>
+                <%}%>
+               <div id="div-submit">
+                  <button type="submit" id="btn-login">Login</button>
+               </div>
+            </form>
+         </div>
+         <div id="login-footer">
+            <div>
+               <a href="">Esqueceu a senha?</a> 
+            </div>
+            <div>
+               <a href="">Não possui cadastro?</a>
+            </div>
+         </div>
+      </div>
+   </main>
+</body>
+</html>
